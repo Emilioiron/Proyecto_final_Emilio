@@ -3,11 +3,55 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 import seaborn as sns
 from IPython.display import set_matplotlib_formats
+from sklearn.externals import joblib
+import datetime
+from datetime import date
 
 set_matplotlib_formats('svg')
 sns.set_style('whitegrid')
 
-Data = pd.read_csv('./data/processed/Data.csv')
+#Data = pd.read_csv('./data/processed/Data.csv')
+
+def reference_data(food):
+    new_food_dict = {'Unnamed: 0': {0: 0},
+                     'Unnamed: 0.1': {0: 16},
+                     'Basal Rate (U/h)': {0: 2.2},
+                     'BWZ Estimate (U)': {0: 9.5},
+                     'BWZ Carb Ratio (U/Ex)': {0: 1.5},
+                     'BWZ Insulin Sensitivity (mg/dL/U)': {0: 50.0},
+                     'BWZ Carb Input (exchanges)': {0: 9.5},
+                     'BWZ BG Input (mg/dL)': {0: 84.0},
+                     'BWZ Correction Estimate (U)': {0: 0.2},
+                     'BWZ Food Estimate (U)': {0: 5},
+                     'BWZ Active Insulin (U)': {0: 0.1},
+                     'BWZ Unabsorbed Insulin Total (U)': {0: 0.5},
+                     'day_of_month': {0: 25},
+                     'day_of_week': {0: 2},
+                     'month_of_year': {0: 3},
+                     'hour': {0: 10}}
+
+    # Actualización de datos, fecha y comida a tomar:
+    new_food_dict['day_of_month'][0] = date.today().day
+    new_food_dict['month_of_year'][0] = date.today().month
+    new_food_dict['hour'][0] = datetime.datetime.now().hour
+    new_food_dict['day_of_week'][0] = datetime.datetime.today().weekday()
+    new_food_dict['BWZ Carb Input (exchanges)'][0] = food
+    new_food_dict['BWZ Food Estimate (U)'][0] = food
+    new_food_today = pd.DataFrame(new_food_dict).to_csv('./data/results/new_food_today.csv')
+    return new_food_today
+
+
+
+def insuline_admin():
+    new_food_today = pd.read_csv('./data/results/new_food_today.csv')
+    model_pickle = joblib.load('./data/results/model.pkl')
+    administrar_insulina = model_pickle.predict(new_food_today)
+    print(f'Te debes administrar ' +
+          pd.DataFrame(administrar_insulina).iloc[0, 0].round(2).astype(str)
+          + ' unidades de insulina')
+    return
+
+
 
 def data_by_hour(df):
     df['hour'] = df['hour'].astype(int)
@@ -16,7 +60,7 @@ def data_by_hour(df):
     return by_hour_mean
 
 def data_by_week(df):
-    by_day_of_week = Data.sort_values('hour')
+    by_day_of_week = df.sort_values('hour')
     by_day_of_week_mean = by_day_of_week.groupby(['day_of_week']).sum()
     return   by_day_of_week_mean
 
@@ -77,4 +121,5 @@ def plotting_function(df_hour,df_day, title):
     fig.savefig('./data/results/' + title + '.pdf', format='pdf')
 
     return 
+
 

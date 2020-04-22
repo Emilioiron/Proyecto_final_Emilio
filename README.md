@@ -19,6 +19,21 @@
 * Se crea un PIPELINE para estudiar los datos, limpiarlos, ordenarlos y analizarlos para obtener unas conclusiones.
 * Finalmente se creará un modelo de Machine Learning.
 
+## PIPELINE
+
+* Se crea un notebook para visualizar datos y analizarlos en primer lugar.
+* A partir de este notebook se crean los notebooks para acquisition, wrangling, analysis y reporting de datos.
+* Acquisition:
+* Wrangling: Se limpian los datos y se obtiene el dataset (Data) con el que se harán los analisis y reporting.
+* Analysis:
+* Reporting: Se muestran visualizaciones y se predice la insulina a administrar (MLmodel)
+
+## Machine Learning Model (MLmodel)
+
+* 
+*
+*
+
 ## Technical requirements
 
 * Para crear el repositorio se utiliza Conda, Bash y GitHub.
