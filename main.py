@@ -21,7 +21,9 @@ model_pickle = joblib.load('data/results/model.pkl')
 new_food = pd.read_csv('data/results/New_data.csv')
 administrar_insulina = model_pickle.predict(new_food)
 pd.DataFrame(administrar_insulina).to_csv('data/results/administrar_insulina.csv')
-print(f'Te debes administrar ' + pd.DataFrame(administrar_insulina).iloc[0,0].round(2).astype(str) + ' unidades de insulina')
+print(f'Te debes administrar ' +
+      pd.DataFrame(administrar_insulina).iloc[0,0].round(2).astype(str)
+      + ' unidades de insulina')
 
 
 if __name__ == '__main__':
