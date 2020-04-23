@@ -47,7 +47,7 @@ def wrangle():
     data_without_nulls['hour'] = data_without_nulls['Time'].dt.hour
 
     # Se eliminan las filas duplicadas
-    data_without_duplicates = data_without_nulls.drop_duplicates()
+    #data_without_duplicates = data_without_nulls.drop_duplicates()
 
     # Se eliminan las columnas 'Date' y 'Time' ya que se han formado las columnas
     # 'day_of_month', 'day_of_week', 'month_of_year' y 'hour' (datos categóricos) a partir de ellas.
