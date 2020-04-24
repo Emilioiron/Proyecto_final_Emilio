@@ -1,7 +1,6 @@
 import pandas as pd
 import warnings
 
-# acquisition functions
 warnings.filterwarnings('ignore')
 
 def acquire():
