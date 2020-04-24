@@ -125,6 +125,7 @@ def plotting_graph(df, title):
     sns.set(style="whitegrid")  # Estilo trazado
 
     fig = plt.figure(figsize=(8, 4))
+    plt.suptitle(title, fontsize=25)
     sns.barplot(x='hour', y='BWZ Carb Input (exchanges)', data=by_hour)
     plt.show()
     fig.savefig('./data/results/graph' + title + '.pdf', format='pdf')
