@@ -102,3 +102,6 @@ Desktop.ini
 # Thumbnails
 ._*
 Thumbs.db
+
+# Others
+__trash__/
