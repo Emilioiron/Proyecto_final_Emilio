@@ -33,7 +33,7 @@ Proyecto final Ironhack
 
 ## PIPELINE
 
-![Pipeline image]()
+![Pipeline image](pipelines.jpg)
 
 * Se crea un notebook para visualizar datos y analizarlos en primer lugar.
 * A partir de este notebook se crean los notebooks para acquisition, wrangling, analysis y reporting de datos.
