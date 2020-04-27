@@ -44,6 +44,7 @@ Proyecto final Ironhack
 
 ## Machine Learning Model (MLmodel)
 
+
 * 1. Data Loading
 
 * 2. EDA (Exploratory Data Analysis)
@@ -58,11 +59,11 @@ In Pipeline: acquisition, wrangling, analysis and reporting.
 
 * 6. Check model performance using cross validation
 
-* 7. Optimize model using grid search
+* 7. Optimize model using grid search 
 
 
-from sklearn.externals import joblib
-joblib.dump(model, 'data/results/model.pkl')
+
+
 
 ## Technical requirements
 
@@ -76,7 +77,7 @@ joblib.dump(model, 'data/results/model.pkl')
 
 ## Estructura de carpetas:
 
-
+```
 └── project
     ├── __trash__
     ├── .gitignore
@@ -106,7 +107,8 @@ joblib.dump(model, 'data/results/model.pkl')
     |
     └── p_reporting
         └── m_reporting.py
-    
+ 
+ ```
 
 ## Conclusions
 El modelo simula la insulina a inyectar para un diabético según los parámetros de su bomba de insulina con un error mínimo.
