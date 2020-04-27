@@ -7,7 +7,7 @@ from sklearn.preprocessing import OneHotEncoder, OrdinalEncoder
 from sklearn.preprocessing import RobustScaler
 from sklearn import preprocessing
 from sklearn.model_selection import train_test_split
-# Cargo el modelo a utilizar
+
 from sklearn.linear_model import Lasso
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.linear_model import LinearRegression
@@ -21,6 +21,7 @@ from sklearn.model_selection import RandomizedSearchCV
 bomba_data = pd.read_csv('data/processed/Data.csv')
 
 # 2. EDA (Exploratory Data Analysis)
+
 # In jupyter notebook
 
 # 3. ML PREPROCESSING
@@ -107,6 +108,7 @@ print(-scores)
 
 
 # 7. Optimize model using grid search
+
 # Se definen los parametros del grid y del model
 # verbose muestra los pasos que ha haciendo el modelo de entrenamiento.
 # cv : validación cruzada
@@ -141,6 +143,8 @@ y_test.to_csv('data/results/Results_y_test.csv')
 
 #import pickle
 #pickle.dumps(model, open('data/results/model.pkl', 'wb'))
+
+
 
 from sklearn.externals import joblib
 joblib.dump(model, 'data/results/model.pkl')
