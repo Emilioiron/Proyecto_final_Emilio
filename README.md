@@ -44,6 +44,7 @@ Proyecto final Ironhack
 
 ## Machine Learning Model (MLmodel)
 
+
 * 1. Data Loading
 
 * 2. EDA (Exploratory Data Analysis)
@@ -54,17 +55,15 @@ In Pipeline: acquisition, wrangling, analysis and reporting.
 
 * 4. Train a simple model
 
-
 * 5. Check model performance on test and train data
-
 
 * 6. Check model performance using cross validation
 
-* 7. Optimize model using grid search
+* 7. Optimize model using grid search 
 
 
-from sklearn.externals import joblib
-joblib.dump(model, 'data/results/model.pkl')
+
+
 
 ## Technical requirements
 
@@ -72,19 +71,13 @@ joblib.dump(model, 'data/results/model.pkl')
 
 * Para la realización de Pipeline se utilizan: Conda, Bash, GitHub, Jupyter Notebooks, Python, Pandas, Numpy...
 
-* Para la realización del modelo de Machine Learning
+* Para la realización del modelo de Machine Learning: Sklearn, StandarScaler, OneHotEncoder, Train-test-split, joblib...
 
 
 
-## Repositorio en GitHub
+## Estructura de carpetas:
 
-
-
-## Pipeline
-
-Estructura de carpetas:
-
-
+```
 └── project
     ├── __trash__
     ├── .gitignore
@@ -114,18 +107,18 @@ Estructura de carpetas:
     |
     └── p_reporting
         └── m_reporting.py
-    
-
-
-## Machine Learning Model
-
-
-
-
-
+ 
+ ```
 
 ## Conclusions
+El modelo simula la insulina a inyectar para un diabético según los parámetros de su bomba de insulina con un error mínimo.
 
+## Mejoras
+
+Calcular las raciones de hidratos de carbono según el alimento o comida.
+Hacer web scrapping para obtener los hidratos de carbono de alimentos y comidas.
+Conectar la aplicacion a un smartwatch para que sea más real y precisa.
+Realizar una app para móvil personalizada para cada diabético.
 
 
 ## Author
