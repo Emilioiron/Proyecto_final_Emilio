@@ -115,3 +115,27 @@ In Pipeline: acquisition, wrangling, analysis and reporting.
  
  ```
 
+## Conclusions
+
+The model simulates the insulin to be injected for a diabetic according to the parameters of his insulin pump with minimal error.
+
+## Enhancements
+
+* Calculate the carbohydrate rations according to the food or meal
+* Do web scraping to get the carbohydrates from food and meals.
+* Connect the application to a smartwatch to make it more real and accurate.
+* Make a personalized mobile app for each diabetic.
+
+
+## Acknowledgment
+
+I appreciate the help provided by the Leads and Assistant Teachers, always answering questions and providing solutions.
+
+I thank and dedicate the project to my wife, Estefi, since without her I would not have been able to carry out it, on the one hand, because of the information provided and, on the other hand, for allowing me to have the necessary dedication to finish it.
+
+## Author
+
+Emilio José Patiño Rodrigo
+
+
+![APM](https://img.shields.io/apm/l/rretreterte)
