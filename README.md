@@ -3,47 +3,52 @@
 
 
 
+# Machine learning model to predict a diabetic's insulin injection
 
-# Modelo de machine learning para predecir la inyección de insulina de un diabético
+Final Ironhack Project
 
-Proyecto final Ironhack
+## Description
 
-## Objetive
+### Objective
 
-* El Objetivo de este proyecto es crear un modelo de Machine Learning que prediga la insulina que tiene que inyectarse un diabético tipo I a partir de los datos que se obtienen de la persona a partir de su bomba de insulina.
+* The aim of this project is to create a Machine Learning model that predicts the insulin that a type I diabetic has to inject from the data obtained from the person's insulin pump.
 
-## Needs
+* Different studies have been carried out in Spain and around the world which conclude that diabetes is a disease that is affecting an increasing percentage of the population, year after year the number of people with type 1 and type 2 diabetes is increasing. This project would be an initial phase to be able to help especially type 1 diabetics to improve their quality of life and not to have serious diseases in the future related to diabetes.
 
-* Dependiendo de los Hidratos de Carbono que una persona come, el pancreas suministra más o menos insulina de forma inmediata. A los diabeticos tipo-1 no les funciona el pancreas y necesitan inyectarse insulina cada vez que comen. 
+* Here I leave link data of [Spain](https://www.ciberdem.org/noticias/ciberdem-publica-los-resultados-del-estudio-di-betes-sobre-la-incidencia-de-la-enfermedad-en-espana) and at [world](https://www.who.int/diabetes/es/)
 
-* Es complicado ajustar la insulina a lo que come una persona diabética en cada momento y esto es un problema muchas veces para ellos ya que pueden tener niveles muy altos o muy bajos de glucosa en sangre debido a un cálculo erroneo y esto puede desencadenar en problemas de salud graves o incluso la muerte, a largo plazo.
+### Needs of a diabetic
 
-* Este modelo calcula las unidades de insulina que un diabético necesita según lo que come a partir de los parámetros que tiene su bomba de insulina (personalizados), hora y día de la semana.
+* Depending on the carbohydrates a person eats, the pancreas delivers more or less insulin immediately. Type 1 diabetics do not have a working pancreas and need to inject insulin every time they eat. 
 
+* It is difficult to adjust the insulin to what a diabetic eats at any given time and this is a problem many times for them as they can have very high or very low blood glucose levels due to miscalculation and this can lead to serious health problems or even death, in the long run.
+
+* This model calculates the units of insulin that a diabetic needs according to what they eat from the parameters that their insulin pump has (personalized), time and day of the week.
 
 
 ## Steps I have followed
 
-* Se crea un repositirio para el proyecto con el nombre de "Proyecto_final_Emilio".
-* Descargar los datos de la bomba de insulina (Medtronic) desde su aplicación Carelink.
-* Se descargan los datos desde junio de 2015 hasta marzo de 2020.
-* Los datos no se pueden descargar de forma personalizada con fecha de inicio y fin para más de tres meses, por lo que hay que descargar 20 archivos en formato CSV para después unirlos.
-* Se crea un PIPELINE para estudiar los datos, limpiarlos, ordenarlos y analizarlos para obtener unas conclusiones.
-* Finalmente se creará un modelo de Machine Learning.
+* A repository is created for the project with the name "Emilio_End_Project".
+* Download the insulin pump (Medtronic) data from your Carelink application
+* Data is downloaded from June 2015 to March 2020.
+* The data cannot be downloaded in a personalized way with a start and end date for more than three months, so you have to download 20 files in CSV format to join them later.
+* A PIPELINE is created to study the data, clean it, order it and analyze it to obtain some conclusions.
+* Finally a model of Machine Learning will be created.
+
 
 ## PIPELINE
 
 ![Pipeline image](pipelines.jpg)
 
-* Se crea un notebook para visualizar datos y analizarlos en primer lugar.
-* A partir de este notebook se crean los notebooks para acquisition, wrangling, analysis y reporting de datos.
+* A notebook is created to display data and analyze it first.
+* From this notebook, notebooks are created for data acquisition, wrangling, analysis and reporting.
 * Acquisition:
-* Wrangling: Se limpian los datos y se obtiene el dataset (Data) con el que se harán los analisis y reporting.
+* Wrangling: The data is cleaned and the dataset is obtained, with which the analysis and reporting will be done.
 * Analysis:
-* Reporting: Se muestran visualizaciones y se predice la insulina a administrar (MLmodel)
+* Reporting: Visualizations are shown and the insulin to be administered is predicted (MLmodel)
+
 
 ## Machine Learning Model (MLmodel)
-
 
 * 1. Data Loading
 
@@ -53,25 +58,25 @@ In Pipeline: acquisition, wrangling, analysis and reporting.
 
 * 3. ML PREPROCESSING
 
-* 4. Train a simple model
+* Train a simple model
 
 * 5. Check model performance on test and train data
 
 * 6. Check model performance using cross validation
 
-* 7. Optimize model using grid search 
-
-
+* Optimize model using grid search 
 
 
 
 ## Technical requirements
 
-* Para crear el repositorio se utiliza Conda, Bash y GitHub.
+* Conda, Bash and GitHub are used to create the repository.
 
-* Para la realización de Pipeline se utilizan: Conda, Bash, GitHub, Jupyter Notebooks, Python, Pandas, Numpy...
+* To create the Pipeline we use: Conda, Bash, GitHub, Jupyter Notebooks, Python, Pandas, Numpy...
 
-* Para la realización del modelo de Machine Learning: Sklearn, StandarScaler, OneHotEncoder, Train-test-split, joblib...
+* For the realization of the Machine Learning model: Sklearn and its libraries, Pipeline, StandarScaler, OneHotEncoder, Train-test-split, mean_squared_error, r2_score.
+
+* To connect the trained model to the final calculation and to be able to make the prediction you use joblib...
 
 
 
@@ -109,19 +114,4 @@ In Pipeline: acquisition, wrangling, analysis and reporting.
         └── m_reporting.py
  
  ```
-
-## Conclusions
-El modelo simula la insulina a inyectar para un diabético según los parámetros de su bomba de insulina con un error mínimo.
-
-## Mejoras
-
-Calcular las raciones de hidratos de carbono según el alimento o comida.
-Hacer web scrapping para obtener los hidratos de carbono de alimentos y comidas.
-Conectar la aplicacion a un smartwatch para que sea más real y precisa.
-Realizar una app para móvil personalizada para cada diabético.
-
-
-## Author
-
-Emilio José Patiño Rodrigo
 
