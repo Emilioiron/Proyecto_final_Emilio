@@ -137,5 +137,3 @@ I thank and dedicate the project to my wife, Estefi, since without her I would n
 
 Emilio José Patiño Rodrigo
 
-
-![APM](https://img.shields.io/apm/l/rretreterte)
